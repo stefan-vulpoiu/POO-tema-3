@@ -14,36 +14,34 @@ Clasele derivate sunt: BecRgb, Termostat, Televizor, Frigider, AerConditionat. A
 
 Meniu este clasa care se ocupă cu citirile de la tastatură si afisarile pe ecran, Contine un while si un switch cu toate optiunile posibile aplicate pe dispozitivele casei smart:
 
-Adaugă un dispozitiv;
+1. Adaugă un dispozitiv;
 
-Afișează toate dispozitivele;
+2. Afișează toate dispozitivele;
 
-Declanșează modul SEARA;
+3. Declanșează modul SEARA;
 
-Declanșează modul DIMINEATA;
+4. Declanșează modul DIMINEATA;
 
-A
+5. Numara tipul de dispozitive;
 
-Setează optiunile unui dispozitiv (temperatura, volum);
+6. Setează optiunile unui dispozitiv (temperatura, volum);
 
-Elimină un dispozitiv;
+7. Elimină un dispozitiv;
 
-Schimbă canalul la televizor;
+8. Schimbă canalul la televizor;
 
 0. Închide programul.
 
 Tot aici sunt punctate și erorile prin blocurile try-catch. Dacă utilizatorul face o greșeală, sistemul prinde SmartHomeException, afișează un mesaj clar de eroare și îl lasă să încerce din nou, fără să se închidă rularea programului.
 
 
+Clasa Parametru este clasa șablon, care reține valoarea curentă si limitele superioara si inferioara. Dacă este introdusă o valoare peste limită prin setValoare(), va arunca eroare. Astfel este respectat și principiul S: Single responsibility principle.
 
-	Clasa Parametru este clasa șablon, care reține valoarea curentă si limitele superioara si inferioara. Dacă este introdusă o valoare peste limită prin setValoare(), va arunca eroare. Astfel este respectat și principiul S: Single responsibility principle. 
+Fișierul Utilitare.h conține funcția șablon numaraDispozitiveDupaTip<T>. Ea folosește dynamic_cast ca să verifice numarul exact de elemente de tipul <T>.
 
-	Fișierul Utilitare.h conține funcția șablon numaraDispozitiveDupaTip<T>. Ea folosește dynamic_cast ca să verifice numarul exact de elemente de tipul <T>. 
-
-	In fisierul Exceptii.h sunt creat propriile erori posibile ale programului pentru ca acesta sa nu dea crash. Avem o clasă de bază SmartHomeException care moștenește std::exception din C++. Din ea derivă ValoareInvalidaException (care afiseaza un mesaj de eroare corespunzator daca valoarea introdusa la tastatura este in afara limitelor permise) și DispozitivInexistentException (care afiseaza un mesaj de eroare corespunzator daca se introduce un nume gresit la tastatura atunci cand vrem sa stergem un dispozitiv). 
+În fișierul Exceptii.h sunt creat propriile erori posibile ale programului pentru ca acesta sa nu dea crash. Avem o clasă de bază SmartHomeException care moștenește std::exception din C++. Din ea derivă ValoareInvalidaException (care afiseaza un mesaj de eroare corespunzator daca valoarea introdusa la tastatura este in afara limitelor permise) și DispozitivInexistentException (care afiseaza un mesaj de eroare corespunzator daca se introduce un nume gresit la tastatura atunci cand vrem sa stergem un dispozitiv).
 
 În fișierul Interfete.h sunt definite funcțiile virtuale pure. IReglabil obligă dispozitivele (cum ar fi becul sau televizorul) să aibă o funcție regleazaNivel() ca să poată fi modificate de la 0 la 100. IObserver este piesa principală din Design Pattern-ul Observer, obligând clasele să aibă o metodă update() ca să știe cum să asculte și să reacționeze când Casa le trimite un semnal (ex: modul SEARA sau DIMINEATA).
-
 
 
 Proiectul respectă, de asemenea, principiile SOLID:
