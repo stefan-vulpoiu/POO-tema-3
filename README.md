@@ -14,23 +14,23 @@ Clasele derivate sunt: BecRgb, Termostat, Televizor, Frigider, AerConditionat. A
 
 Meniu este clasa care se ocupă cu citirile de la tastatură si afisarile pe ecran, Contine un while si un switch cu toate optiunile posibile aplicate pe dispozitivele casei smart:
 
-1. Adaugă un dispozitiv;
+1 -> Adaugă un dispozitiv;
 
-2. Afișează toate dispozitivele;
+2 -> Afișează toate dispozitivele;
 
-3. Declanșează modul SEARA;
+3 -> Declanșează modul SEARA;
 
-4. Declanșează modul DIMINEATA;
+4 -> Declanșează modul DIMINEATA;
 
-5. Numara tipul de dispozitive;
+5 -> Numara tipul de dispozitive;
 
-6. Setează optiunile unui dispozitiv (temperatura, volum);
+6 -> Setează optiunile unui dispozitiv (temperatura, volum);
 
-7. Elimină un dispozitiv;
+7 -> Elimină un dispozitiv;
 
-8. Schimbă canalul la televizor;
+8 -> Schimbă canalul la televizor;
 
-0 Închide programul.
+0 -> Închide programul.
 
 Tot aici sunt punctate și erorile prin blocurile try-catch. Dacă utilizatorul face o greșeală, sistemul prinde SmartHomeException, afișează un mesaj clar de eroare și îl lasă să încerce din nou, fără să se închidă rularea programului.
 
