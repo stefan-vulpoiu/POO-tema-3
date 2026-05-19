@@ -30,7 +30,7 @@ Meniu este clasa care se ocupă cu citirile de la tastatură si afisarile pe ecr
 
 8. Schimbă canalul la televizor;
 
-0. Închide programul.
+0 Închide programul.
 
 Tot aici sunt punctate și erorile prin blocurile try-catch. Dacă utilizatorul face o greșeală, sistemul prinde SmartHomeException, afișează un mesaj clar de eroare și îl lasă să încerce din nou, fără să se închidă rularea programului.
 
