@@ -1,7 +1,7 @@
 #pragma once
 #include "DispozitivSmart.h"
 #include "Interfete.h"
-#include "Parametru.h" // NOU: Folosim clasa sablon
+#include "Parametru.h"
 
 class Televizor : public DispozitivSmart, public IReglabil
 {
