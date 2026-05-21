@@ -1,6 +1,6 @@
 #pragma once
 #include "DispozitivSmart.h"
-#include "Parametru.h" // Adaugat
+#include "Parametru.h"
 
 //mostenire multipla: BecRgb este un DispozitivSmart si, in acelasi timp,
 //implementeaza interfata IReglabil
