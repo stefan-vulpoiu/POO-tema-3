@@ -8,7 +8,7 @@ Frigider::Frigider(std::string n, float temp) : DispozitivSmart(n), temperaturaC
 
 void Frigider::regleazaNivel(int valoare)
 {
-    //validarea se face in clasa sablon
+    //validarea se face in clasa template
     temperaturaCurenta.setValoare((float)valoare);
 }
 

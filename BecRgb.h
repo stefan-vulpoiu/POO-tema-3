@@ -7,7 +7,7 @@
 class BecRgb : public DispozitivSmart, public IReglabil //mosteneste DispozitivSmart; implementeaza IReglabil
 {
 private:
-    Parametru<int> intensitate; //folosim clasa sablon
+    Parametru<int> intensitate; //folosim clasa template
 public:
     BecRgb(std::string n);
 

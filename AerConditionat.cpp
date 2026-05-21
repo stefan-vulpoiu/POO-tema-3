@@ -6,7 +6,7 @@ AerConditionat::AerConditionat(std::string n, float temp)
 
 void AerConditionat::regleazaNivel(int valoare)
 {
-    //validarea se face in clasa sablon
+    //validarea se face in clasa template
     temperaturaCurenta.setValoare((float)valoare);
     porneste();
 }

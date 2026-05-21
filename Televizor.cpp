@@ -5,7 +5,7 @@ Televizor::Televizor(std::string n) : DispozitivSmart(n), volum(20, 0, 100), can
 
 void Televizor::regleazaNivel(int procent)
 {
-    //validarea se face in clasa sablon
+    //validarea se face in clasa template
     volum.setValoare(procent);
 
     if (volum.getValoare() > 0)
@@ -16,7 +16,7 @@ void Televizor::regleazaNivel(int procent)
 
 void Televizor::schimbaCanal(int c)
 {
-    //validarea se face in clasa sablon
+    //validarea se face in clasa template
     canal.setValoare(c);
     porneste();
 }

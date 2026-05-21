@@ -1,4 +1,4 @@
-//Utilitare.h (Functia sablon)
+//Utilitare.h (Functia template)
 #pragma once
 #include <vector>
 #include "DispozitivSmart.h"

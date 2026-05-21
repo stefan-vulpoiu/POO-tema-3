@@ -1,4 +1,4 @@
-//Parametru.h (Clasa sablon)
+//Parametru.h (Clasa template)
 #pragma once
 #include "Exceptii.h"
 #include <string>
